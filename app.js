@@ -4,6 +4,8 @@ const duration = document.querySelector('#duration');
 const progressBar = document.querySelector('#progress-bar');
 const playBtn = document.querySelector('#play');
 const pauseBtn = document.querySelector('#pause');
+const muteBtn = document.querySelector('#mute');
+
 
 let time_update_interval = 0;
 
@@ -70,6 +72,18 @@ playBtn.addEventListener('click', function () {
 
 pauseBtn.addEventListener('click', function () {
     player.pauseVideo();
+})
+
+muteBtn.addEventListener('click', function () {
+
+    if (player.isMuted()) {
+        player.unMute();
+        this.innerHTML = '<i class="fas fa-volume-mute">';
+    }
+    else {
+        player.mute();
+        this.innerHTML = '<i class="fas fa-volume-up">';
+    }
 })
 
 function formatTime(time) {
