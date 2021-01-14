@@ -33,6 +33,16 @@ header{
     margin: 2rem 0rem;
 }
 
+.controls > *{
+    margin-right: 1rem;
+}
+
+.time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .video  {
     width: 560px;
