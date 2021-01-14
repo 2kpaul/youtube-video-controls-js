@@ -3,6 +3,8 @@ const currentTime = document.querySelector('#current-time');
 const duration = document.querySelector('#duration');
 const progressBar = document.querySelector('#progress-bar');
 const playBtn = document.querySelector('#play');
+const pauseBtn = document.querySelector('#pause');
+
 let time_update_interval = 0;
 
 function onYouTubeIframeAPIReady() {
@@ -64,6 +66,10 @@ progressBar.addEventListener('mouseup', function (event) {
 
 playBtn.addEventListener('click', function () {
     player.playVideo();
+})
+
+pauseBtn.addEventListener('click', function () {
+    player.pauseVideo();
 })
 
 function formatTime(time) {
